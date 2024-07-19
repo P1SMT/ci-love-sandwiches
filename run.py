@@ -149,3 +149,4 @@ print("Welcome to Love Sandwiches Data Automation:\n")
 main()
 
 
+#Code to create requirments.txt file = "pip3 freeze > requirements.txt" which is entered in the gitpod/vscode command line
