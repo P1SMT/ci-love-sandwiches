@@ -146,7 +146,16 @@ def main():
     update_worksheet(stock_data, "stock")
 
 print("Welcome to Love Sandwiches Data Automation:\n")
-main()
+stock_data = main() #change to include Love Sandwiches Challange
 
+def get_stock_values(data):
+    headings = SHEET.worksheet("stock").get_all_values()[0]
+    stockDict = { headings:data for (headings,data) in zip(headings, data)}
+    return stockDict
+    
+stock_values = get_stock_values(stock_data)
+
+print("Make the following numbers of sandwiches for next market:\n")
+print(stock_values)
 
 #Code to create requirments.txt file = "pip3 freeze > requirements.txt" which is entered in the gitpod/vscode command line
